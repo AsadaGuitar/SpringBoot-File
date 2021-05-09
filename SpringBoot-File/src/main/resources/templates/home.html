@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>ファイルアップローダー</h2>
+
+<form th:action="@{/upload}" th:object="${fileData}"
+	enctype="multipart/form-data" th:method="post">
+<label>ファイルを選択</label>	
+<input type="file" th:field="*{uploadFile}">
+<button type="submit">送信</button>
+</form>
+
+</body>
+</html>
